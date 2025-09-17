@@ -1,22 +1,17 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
-    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
-    namespace = "com.febin.ecom"
+    namespace = "com.ecom.feature.user_dashboard"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.febin.ecom"
         minSdk = 24
-        targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
-
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -41,7 +36,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -61,13 +55,8 @@ dependencies {
     // Core Modules
     implementation(project(":core:ui"))
     implementation(project(":core:common"))
-    implementation(project(":core:data"))
     implementation(project(":core:domain"))
-
-    // Feature Modules
-    implementation(project(":feature:authentication"))
-    implementation(project(":feature:common_screens"))
-    implementation(project(":feature:user_dashboard"))
+    implementation(project(":core:data"))
 
     // Koin
     implementation(libs.koin.androidx.compose)

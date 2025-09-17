@@ -40,33 +40,33 @@ This list tracks the progress of the Ecom application development.
     - [X] Apply theme in `MainActivity`
 
 ## Phase 1: Authentication Feature
-- [ ] Create `:feature:authentication` module
-- [ ] Define `AuthContract.kt` (State, Intent, Effect) for Login, Signup, Forgot Password
-- [ ] Implement `LoginViewModel`
-- [ ] Implement `SignupViewModel`
-- [ ] Implement `ForgotPasswordViewModel`
-- [ ] Implement `ForgotPasswordOtpViewModel`
-- [ ] Implement Use Cases (Domain): `LoginUserUseCase`, `RegisterUserUseCase`, `RequestForgotPasswordUseCase`, `VerifyOtpAndResetPasswordUseCase`, `GoogleLoginUseCase` (placeholder)
-- [ ] Update/Implement Repositories (Data): `AuthRepository`/`UserRepository` for auth flows
-- [ ] Implement API Service (Data): `AuthApiService` for relevant Ktor calls
-- [ ] Implement UI Screen: `LoginScreen.kt`
-- [ ] Implement UI Screen: `SignupScreen.kt`
-- [ ] Implement UI Screen: `ForgotPasswordScreen.kt`
-- [ ] Implement UI Screen: `ForgotPasswordOtpScreen.kt`
-- [ ] Setup `AuthNavGraph.kt` and integrate into main NavHost
-- [ ] Create `authDIModule.kt` in `:feature:authentication`
-- [ ] Unit tests for ViewModels and Use Cases
+- [X] Create `:feature:authentication` module
+- [X] Define `AuthContract.kt` (State, Intent, Effect) for Login, Signup, Forgot Password
+- [X] Implement `LoginViewModel`
+- [X] Implement `SignupViewModel`
+- [X] Implement `ForgotPasswordViewModel`
+- [X] Implement `ForgotPasswordOtpViewModel`
+- [X] Implement Use Cases (Domain): `LoginUserUseCase`, `RegisterUserUseCase`, `RequestForgotPasswordUseCase`, `VerifyOtpAndResetPasswordUseCase`, `GoogleLoginUseCase` (placeholder)
+- [X] Update/Implement Repositories (Data): `AuthRepository`/`UserRepository` for auth flows
+- [X] Implement API Service (Data): `AuthApiService` for relevant Ktor calls
+- [X] Implement UI Screen: `LoginScreen.kt`
+- [X] Implement UI Screen: `SignupScreen.kt`
+- [X] Implement UI Screen: `ForgotPasswordScreen.kt`
+- [X] Implement UI Screen: `ForgotPasswordOtpScreen.kt`
+- [X] Setup `AuthNavGraph.kt` and integrate into main NavHost
+- [X] Create `authDIModule.kt` in `:feature:authentication`
+- [X] Unit tests for ViewModels and Use Cases
 
 ## Phase 2: Common Screens
-- [ ] Create `:feature:common_screens` module
-- [ ] Implement `SplashScreen.kt`
-- [ ] Implement `WelcomeOnboardingScreen.kt`
-- [ ] Implement `PrivacyPolicyScreen.kt`
-- [ ] Implement `TermsAndConditionsScreen.kt`
-- [ ] Implement `ReturnPolicyScreen.kt`
-- [ ] ViewModel for Onboarding (if needed)
-- [ ] Integrate into main NavHost
-- [ ] Koin Module for ViewModels
+- [X] Create `:feature:common_screens` module
+- [X] Implement `SplashScreen.kt`
+- [X] Implement `WelcomeOnboardingScreen.kt`
+- [X] Implement `PrivacyPolicyScreen.kt`
+- [X] Implement `TermsAndConditionsScreen.kt`
+- [X] Implement `ReturnPolicyScreen.kt`
+- [X] ViewModel for Onboarding (if needed)
+- [X] Integrate into main NavHost
+- [X] Koin Module for ViewModels
 
 ## Phase 3: User Flow - Part 1 (Dashboard, Profile, Products)
 - [ ] Create `:feature:user_dashboard` module

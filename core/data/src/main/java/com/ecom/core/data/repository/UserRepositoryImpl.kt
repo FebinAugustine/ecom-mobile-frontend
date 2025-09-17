@@ -1,5 +1,7 @@
 package com.ecom.core.data.repository
 
+import com.ecom.core.data.dto.ForgotPasswordRequest
+import com.ecom.core.data.dto.ForgotPasswordVerifyCodeRequest
 import com.ecom.core.data.dto.LoginRequest
 import com.ecom.core.data.dto.RegisterRequest
 import com.ecom.core.data.dto.toDomain
@@ -35,6 +37,26 @@ class UserRepositoryImpl(
             val response = authApiService.register(request)
             appPreferences.saveToken(response.token)
             Result.success(response.user.toDomain())
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+    override suspend fun forgotPassword(email: String): Result<Unit> {
+        return try {
+            val request = ForgotPasswordRequest(email)
+            authApiService.forgotPassword(request)
+            Result.success(Unit)
+        } catch (e: Exception) {
+            Result.failure(e)
+        }
+    }
+
+    override suspend fun verifyOtpAndResetPassword(email: String, code: String, newPassword: String): Result<Unit> {
+        return try {
+            val request = ForgotPasswordVerifyCodeRequest(email, code, newPassword)
+            authApiService.forgotPasswordVerifyCode(request)
+            Result.success(Unit)
         } catch (e: Exception) {
             Result.failure(e)
         }

@@ -67,4 +67,8 @@ dependencies {
     // Lifecycle
     implementation(libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.lifecycle.runtime.compose)
+
+    // Testing
+    testImplementation(libs.koin.test)
+    testImplementation(libs.mockito.core)
 }

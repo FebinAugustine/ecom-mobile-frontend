@@ -1,5 +1,7 @@
 package com.ecom.core.data.remote.service
 
+import com.ecom.core.data.dto.ForgotPasswordRequest
+import com.ecom.core.data.dto.ForgotPasswordVerifyCodeRequest
 import com.ecom.core.data.dto.LoginRequest
 import com.ecom.core.data.dto.LoginResponse
 import com.ecom.core.data.dto.RegisterRequest
@@ -7,4 +9,6 @@ import com.ecom.core.data.dto.RegisterRequest
 interface AuthApiService {
     suspend fun login(request: LoginRequest): LoginResponse
     suspend fun register(request: RegisterRequest): LoginResponse
+    suspend fun forgotPassword(request: ForgotPasswordRequest)
+    suspend fun forgotPasswordVerifyCode(request: ForgotPasswordVerifyCodeRequest)
 }
