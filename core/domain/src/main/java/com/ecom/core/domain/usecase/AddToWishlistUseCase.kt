@@ -1,0 +1,7 @@
+package com.ecom.core.domain.usecase
+
+import com.ecom.core.domain.repository.WishlistRepository
+
+class AddToWishlistUseCase(private val wishlistRepository: WishlistRepository) {
+    suspend operator fun invoke(productId: String) = wishlistRepository.addToWishlist(productId)
+}
